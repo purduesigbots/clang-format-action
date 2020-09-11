@@ -1,6 +1,9 @@
 name: 'clang-format action'
 description: 'run clang-format on your code'
 author: 'purduesigbots'
+branding:
+  icon: align-center
+  color: yellow
 inputs: 
   style:
     description: 'style passed to clang-format. reads .clang-format file in the repo by default. see clang-format docs for more.'
