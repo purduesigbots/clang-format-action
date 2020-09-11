@@ -1,3 +1,3 @@
 #!/bin/sh -l
 
-echo "hello $1"
+git-clang-format --style="$1" HEAD~1
