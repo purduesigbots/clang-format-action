@@ -1,6 +1,6 @@
-FROM alpine:3.10
+FROM ubuntu:latest
 
-COPY LICENSE README.md /
+RUN apt-get install clang-format-10
 
 COPY entrypoint.sh /entrypoint.sh
 
