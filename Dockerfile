@@ -1,6 +1,6 @@
-FROM ubuntu:focal
+FROM ubuntu:latest
 
-RUN apt-get install clang-format-10
+RUN apt-get install clang-format
 
 COPY entrypoint.sh /entrypoint.sh
 
