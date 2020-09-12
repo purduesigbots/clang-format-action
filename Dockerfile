@@ -1,6 +1,14 @@
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update
+
+# install tzdata noninteractively to forestall getting
+# stuck at the configuration step
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=America/Indianapolis
+RUN apt-get install -y tzdata
+
+RUN apt-get install -y \
   git \
   lsb-release \
   wget \
