@@ -1,10 +1,10 @@
 FROM ubuntu:latest
 
-RUN apt update
-RUN apt install wget
-RUN bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+RUN apt-get update && apt-get install -y wget
 
-RUN apt install clang-format
+RUN bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)" && \
+  apt-get update && \
+  apt-get install -y clang-format
 
 COPY entrypoint.sh /entrypoint.sh
 
