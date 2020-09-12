@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # check out HEAD on the branch
-      - uses: actions/checkout@2
+      - uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
       # format the latest commit
