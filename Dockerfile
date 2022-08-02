@@ -20,4 +20,6 @@ RUN bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)" && \
 
 COPY entrypoint.sh /entrypoint.sh
 
+USER 1001:121
+
 ENTRYPOINT ["/entrypoint.sh"]
