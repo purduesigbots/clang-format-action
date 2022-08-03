@@ -8,8 +8,12 @@ inputs:
   style:
     description: 'style passed to clang-format. reads .clang-format file in the repo by default. see clang-format docs for more.'
     default: 'file'
+  base:
+    description: 'The base branch/commit to base the formatting off of'
+    default: 'HEAD^'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.style }}
+    - ${{ inputs.base }}
